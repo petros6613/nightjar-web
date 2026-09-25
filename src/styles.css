@@ -341,10 +341,10 @@ a {
   padding-block: 0 96px;
 }
 
-/* orange band right under the hero */
+/* grey band right under the hero, same tone as the Technology panel */
 .section.key-facts .section-body {
-  background: var(--accent-fill);
-  color: var(--accent-ink);
+  background: var(--panel);
+  border-block: 1px solid var(--line);
 }
 
 .facts {
@@ -359,12 +359,13 @@ a {
   font-size: 26px;
   font-weight: 800;
   letter-spacing: -0.03em;
+  color: var(--accent);
 }
 
 .facts p {
   margin-top: 6px;
   font-size: 15px;
-  opacity: 0.8;
+  color: var(--muted);
 }
 
 @media (max-width: 760px) {
