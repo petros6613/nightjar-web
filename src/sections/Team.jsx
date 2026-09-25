@@ -1,11 +1,11 @@
 import Section from '../components/Section.jsx'
-import { founders } from '../content.js'
+import { team } from '../content.js'
 
 export default function Team() {
   return (
-    <Section id="team" title="Two engineers from ČVUT." full wide>
+    <Section id="team" title={team.title} full wide>
       <ul className="team">
-        {founders.map((person) => (
+        {team.founders.map((person) => (
           <li key={person.name}>
             <img
               className="portrait"

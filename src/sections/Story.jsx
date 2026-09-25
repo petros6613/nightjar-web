@@ -11,8 +11,8 @@ export default function Story() {
       ref={ref}
       className={
         visible
-          ? 'section section-full section-bleed bleed-right is-visible'
-          : 'section section-full section-bleed bleed-right'
+          ? 'section section-full section-bleed bleed-right section-night is-visible'
+          : 'section section-full section-bleed bleed-right section-night'
       }
     >
       <div className="bleed-copy">

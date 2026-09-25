@@ -16,7 +16,7 @@ export default function Technology() {
       }
     >
       <div className="bleed-media">
-        <img src="/images/slide-rotor.jpg" alt="Nightjar rotor head" width="1480" height="832" loading="lazy" />
+        <img src={technology.image} alt={technology.imageAlt} width="1480" height="832" loading="lazy" />
       </div>
       <div className="bleed-copy">
         <h2 className="section-head reveal">{technology.title}</h2>

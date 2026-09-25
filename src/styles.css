@@ -1,25 +1,30 @@
 :root {
-  /* Grey as the main colour, dark green as the contrast; orange kept as a small secondary accent */
-  --bg: #d9dcdf;
-  --panel: #cfd3d6;
-  --surface: #e6e8ea;
-  --ink: #1c2320;
-  --muted: #5b6460;
-  --line: #b9bec2;
-  --accent: #1f4d3a;
-  --accent-hover: #2a6a50;
-  --accent-ink: #eef2ef;
-  --accent-2: #ff5b14;
+  /* Warm grey as the main colour, the orange from the render's motor as the accent,
+     graphite for the two dark sections (Story and Contact). */
+  --bg: #dcdbd7;
+  --panel: #e8e6e1;
+  --surface: #ecebe7;
+  --ink: #1f211e;
+  --muted: #5e605b;
+  --line: #bcbab4;
+  --accent: #c2470f;
+  --accent-fill: #e0561a;
+  --accent-hover: #f0641f;
+  --accent-ink: #1a1512;
+  --graphite: #1f211e;
+  --graphite-ink: #e8e6e1;
+  --graphite-muted: #b3b1ab;
 
   /* same colours as channels, for see-through versions */
-  --bg-rgb: 217 220 223;
-  --ink-rgb: 28 35 32;
-  --line-rgb: 185 190 194;
-  --accent-rgb: 31 77 58;
-  --accent-2-rgb: 255 91 20;
+  --bg-rgb: 220 219 215;
+  --ink-rgb: 31 33 30;
+  --line-rgb: 188 186 180;
+  --accent-rgb: 224 86 26;
 
   /* dark image overlays stay dark regardless of theme */
-  --dark-rgb: 12 18 15;
+  --dark-rgb: 14 16 14;
+
+  --header-h: 64px;
 
   --font: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -32,8 +37,8 @@
 }
 
 html {
-  /* header height; Lenis reads this too when scrolling to a section */
-  scroll-padding-top: 64px;
+  /* Lenis reads this too when scrolling to a section */
+  scroll-padding-top: var(--header-h);
 }
 
 body {
@@ -131,7 +136,7 @@ a {
   height: 48px;
   padding-inline: 24px;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--accent-fill);
   color: var(--accent-ink);
   font-weight: 700;
   font-size: 15px;
@@ -164,7 +169,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  height: 64px;
+  height: var(--header-h);
 }
 
 .wordmark {
@@ -237,7 +242,7 @@ a {
   display: flex;
   align-items: flex-end;
   /* pulled up under the transparent header */
-  margin-top: -64px;
+  margin-top: calc(-1 * var(--header-h));
   height: 100svh;
   min-height: 560px;
   max-height: 980px;
@@ -255,6 +260,7 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: 100% 0%;
+  will-change: transform;
   animation: hero-settle 2.4s var(--ease-out) both;
 }
 
@@ -379,6 +385,12 @@ a {
   padding-top: 0;
 }
 
+.uses .section-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .panels {
   display: flex;
   flex: 1;
@@ -445,7 +457,7 @@ a {
   margin-bottom: 6px;
   font-size: 14px;
   font-weight: 700;
-  color: #b9d3c3;
+  color: #f0b894;
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -481,7 +493,7 @@ a {
 }
 
 .panel:focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--accent-fill);
   outline-offset: -3px;
 }
 
@@ -521,7 +533,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100svh - 64px);
+  min-height: calc(100svh - var(--header-h));
 }
 
 .section-full > .container,
@@ -536,17 +548,18 @@ a {
 
 /* Closing band in the accent colour */
 .section-dark {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--graphite);
+  color: var(--graphite-ink);
 }
 
-.section-dark .button {
-  background: var(--accent-ink);
-  color: var(--accent);
+/* Story: same graphite as the closing band */
+.section-night {
+  background: var(--graphite);
+  color: var(--graphite-ink);
 }
 
-.section-dark .button:hover {
-  background: #fff;
+.section-night .story-text p {
+  color: var(--graphite-muted);
 }
 
 /* Image bleeding to one screen edge, copy in the other half aligned with the text container */
@@ -559,14 +572,17 @@ a {
 .bleed-media {
   position: relative;
   min-height: 420px;
+  overflow: hidden;
 }
 
+/* taller than its box so the parallax shift (see smoothScroll.js) never shows an edge */
 .bleed-media img {
   position: absolute;
-  inset: 0;
+  inset: -10% 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
+  will-change: transform;
 }
 
 /* outer edge lines up with the container gutter, inner edge keeps clear of the image */
@@ -760,8 +776,8 @@ a {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--accent-2);
-  box-shadow: 0 0 0 6px rgb(var(--accent-2-rgb) / 0.25);
+  background: var(--accent-fill);
+  box-shadow: 0 0 0 6px rgb(var(--accent-rgb) / 0.25);
   transform: scale(0);
   transition: transform 0.5s 2.1s cubic-bezier(0.3, 1.6, 0.5, 1);
 }
@@ -773,7 +789,7 @@ a {
 
 @keyframes pulse {
   50% {
-    box-shadow: 0 0 0 12px rgb(var(--accent-2-rgb) / 0);
+    box-shadow: 0 0 0 12px rgb(var(--accent-rgb) / 0);
   }
 }
 
@@ -799,7 +815,7 @@ a {
   margin-top: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--accent-2);
+  color: var(--accent);
 }
 
 /* phones: vertical rail on the left */

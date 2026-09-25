@@ -11,6 +11,10 @@ export const hero = {
   eyebrow: 'Technology for those who protect',
   title: 'Nightjar',
   text: 'A quiet micro-helicopter for police, firefighters and nature conservation.',
+  image: '/images/nightjar-hero.jpg',
+  // TODO: demo only. The wide image has background added by hand; replace with a proper wide render
+  imageWide: '/images/nightjar-hero-wide.jpg',
+  imageAlt: 'Nightjar micro-helicopter render',
 }
 
 // Four facts the client named as the most important
@@ -24,34 +28,39 @@ export const keyFacts = [
 // Use-case slideshow
 // TODO: police scene: client wants an AI-generated, more action-oriented image (placeholder for now)
 // TODO: retouch the scene images so they look less AI-generated
-export const uses = [
-  {
-    image: '/images/forest-silhouette.webp',
-    alt: 'Nightjar silhouette flying between trees',
-    title: 'Police',
-    subtitle: 'Search for people.',
-    text: 'A look at a place before anyone walks in. Quiet enough that nobody notices it is there.',
-  },
-  {
-    image: '/images/fire-silhouette.webp',
-    alt: 'Nightjar silhouette above a forest fire',
-    title: 'Firefighters',
-    subtitle: 'Fire monitoring.',
-    text: 'Thermal view of hot spots and the fire front, from a safe distance.',
-  },
-  {
-    image: '/images/forest-silhouette.webp',
-    alt: 'Nightjar silhouette over a forest',
-    title: 'Nature conservation',
-    subtitle: 'Wildlife monitoring and preservation.',
-    text: 'Watch animals without disturbing them. At 10 m, they cannot hear it.',
-  },
-]
+export const uses = {
+  title: 'See the situation before you step into it.',
+  scenes: [
+    {
+      image: '/images/forest-silhouette.webp',
+      alt: 'Nightjar silhouette flying between trees',
+      title: 'Police',
+      subtitle: 'Search for people.',
+      text: 'A look at a place before anyone walks in. Quiet enough that nobody notices it is there.',
+    },
+    {
+      image: '/images/fire-silhouette.webp',
+      alt: 'Nightjar silhouette above a forest fire',
+      title: 'Firefighters',
+      subtitle: 'Fire monitoring.',
+      text: 'Thermal view of hot spots and the fire front, from a safe distance.',
+    },
+    {
+      image: '/images/forest-silhouette.webp',
+      alt: 'Nightjar silhouette over a forest',
+      title: 'Nature conservation',
+      subtitle: 'Wildlife monitoring and preservation.',
+      text: 'Watch animals without disturbing them. At 10 m, they cannot hear it.',
+    },
+  ],
+}
 
 // Technology: kept simple on purpose, the client wants a non-engineer to follow it
 export const technology = {
   title: 'Streamlined design.',
   lead: 'One motor drives the main rotor. No swashplate. Patent pending.',
+  image: '/images/slide-rotor.jpg',
+  imageAlt: 'Nightjar rotor head',
   points: [
     {
       title: 'One motor instead of four',
@@ -79,36 +88,46 @@ export const story = {
   photoAlt: 'A nightjar resting on a branch',
 }
 
-export const timeline = [
+const timelineSteps = [
   { year: '2026', title: 'Prototype and flight tests', current: true },
   { year: '2027', title: 'Field demo with first users' },
   { year: '2028', title: 'Pilot fleets' },
   { year: '2029', title: 'On sale' },
 ]
 
-export const founders = [
-  {
-    name: 'Zdeněk Janda',
-    role: 'Co-founder',
-    photo: '/images/zdenek-janda.jpg',
-    points: [
-      'Aerospace engineering, ČVUT',
-      'Theoretical physics, Charles University',
-      'Author of four patents',
-      'Entrepreneur, engineering consultant, R&D',
-    ],
-  },
-  {
-    name: 'Peter Praženica',
-    role: 'Co-founder',
-    photo: '/images/peter-prazenica.jpg',
-    points: [
-      'Materials and manufacturing engineering, ČVUT',
-      'Racing car team',
-      'R&D',
-    ],
-  },
-]
+export const timeline = {
+  // built from the first and last step so the heading cannot drift from the data
+  title: `Flight tests in ${timelineSteps[0].year}. On sale in ${timelineSteps.at(-1).year}.`,
+  now: 'We are here',
+  steps: timelineSteps,
+}
+
+export const team = {
+  title: 'Two engineers from ČVUT.',
+  founders: [
+    {
+      name: 'Zdeněk Janda',
+      role: 'Co-founder',
+      photo: '/images/zdenek-janda.jpg',
+      points: [
+        'Aerospace engineering, ČVUT',
+        'Theoretical physics, Charles University',
+        'Author of four patents',
+        'Entrepreneur, engineering consultant, R&D',
+      ],
+    },
+    {
+      name: 'Peter Praženica',
+      role: 'Co-founder',
+      photo: '/images/peter-prazenica.jpg',
+      points: [
+        'Materials and manufacturing engineering, ČVUT',
+        'Racing car team',
+        'R&D',
+      ],
+    },
+  ],
+}
 
 export const contact = {
   title: 'Contact us',

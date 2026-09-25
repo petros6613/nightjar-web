@@ -6,14 +6,10 @@ export default function Hero() {
       {HERO_VIDEO ? (
         <video className="hero-video" src={HERO_VIDEO} autoPlay muted loop playsInline />
       ) : (
-        // TODO: demo only. The wide image has background added by hand; replace with a proper wide render
         <picture>
-          <source media="(min-width: 761px)" srcSet="/images/nightjar-hero-wide.jpg" />
-          <img
-            className="hero-image"
-            src="/images/nightjar-hero.jpg"
-            alt="Nightjar micro-helicopter render"
-          />
+          {/* same breakpoint as the phone media queries in styles.css (760px) */}
+          <source media="(min-width: 761px)" srcSet={hero.imageWide} />
+          <img className="hero-image" src={hero.image} alt={hero.imageAlt} />
         </picture>
       )}
       <div className="container hero-content">

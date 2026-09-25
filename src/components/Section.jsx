@@ -1,10 +1,11 @@
 import useReveal from '../hooks/useReveal.js'
 
-// alt: panel background; dark: accent background; split: heading left, body right;
+// alt: panel background; dark: graphite band; split: heading left, body right;
 // full: at least one screen tall; wide: body in the wide container, heading stays in the text one
 export default function Section({
   id,
   title,
+  className,
   alt = false,
   dark = false,
   split = false,
@@ -15,6 +16,7 @@ export default function Section({
   const [ref, visible] = useReveal()
   const classes = [
     'section',
+    className,
     alt && 'section-alt',
     dark && 'section-dark',
     split && 'section-split',
@@ -27,9 +29,11 @@ export default function Section({
   if (wide) {
     return (
       <section id={id} ref={ref} className={classes}>
-        <div className="container">
-          <h2 className="section-head reveal">{title}</h2>
-        </div>
+        {title && (
+          <div className="container">
+            <h2 className="section-head reveal">{title}</h2>
+          </div>
+        )}
         <div className="container-wide section-body">{children}</div>
       </section>
     )
@@ -38,7 +42,7 @@ export default function Section({
   return (
     <section id={id} ref={ref} className={classes}>
       <div className="container">
-        <h2 className="section-head reveal">{title}</h2>
+        {title && <h2 className="section-head reveal">{title}</h2>}
         <div className="section-body">{children}</div>
       </div>
     </section>
