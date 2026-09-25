@@ -341,15 +341,17 @@ a {
   padding-block: 0 96px;
 }
 
+/* orange band right under the hero */
 .section.key-facts .section-body {
-  border-block: 1px solid var(--line);
+  background: var(--accent-fill);
+  color: var(--accent-ink);
 }
 
 .facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
-  padding-block: 28px;
+  padding-block: 32px;
 }
 
 .facts strong {
@@ -357,13 +359,12 @@ a {
   font-size: 26px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--accent);
 }
 
 .facts p {
   margin-top: 6px;
   font-size: 15px;
-  color: var(--muted);
+  opacity: 0.8;
 }
 
 @media (max-width: 760px) {
