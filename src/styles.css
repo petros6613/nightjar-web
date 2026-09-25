@@ -562,6 +562,11 @@ a {
   color: var(--graphite-muted);
 }
 
+/* the bird sits right of centre in the photo; keep it in the narrow column */
+.section-night .bleed-media img {
+  object-position: 72% 50%;
+}
+
 /* Image bleeding to one screen edge, copy in the other half aligned with the text container */
 .section-bleed {
   display: grid;
