@@ -4,12 +4,8 @@
 // layout 'sheets' = sections stacked like cards with rounded shoulders; those looks differ only in colour
 export const looks = [
   { id: 'current', name: 'Current' },
-  { id: 'forest', name: 'Forest', layout: 'sheets' },
-  { id: 'twilight', name: 'Twilight', layout: 'sheets' },
   { id: 'lichen', name: 'Lichen', layout: 'sheets' },
   { id: 'petrol', name: 'Petrol', layout: 'sheets' },
-  { id: 'signal', name: 'Signal', layout: 'sheets' },
-  { id: 'thermal', name: 'Thermal', layout: 'sheets' },
 ]
 
 const STORAGE_KEY = 'nightjar-look'

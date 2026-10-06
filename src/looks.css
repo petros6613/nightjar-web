@@ -116,9 +116,8 @@
   color: var(--ink);
 }
 
-/* the blocks that start a new sheet (in Forest the Team stays on the Progress sheet) */
-[data-layout='sheets'] :is(.key-facts, #technology, #story, #progress, #contact),
-[data-layout='sheets']:not([data-look='forest']) #team {
+/* the blocks that start a new sheet */
+[data-layout='sheets'] :is(.key-facts, #technology, #story, #progress, #team, #contact) {
   margin-top: calc(-1 * var(--sheet-r));
   border-radius: var(--sheet-r) var(--sheet-r) 0 0;
   box-shadow: 0 -18px 44px -20px var(--sheet-shadow);
@@ -159,7 +158,7 @@
 }
 
 /* the render's own grey takes the colour of the sheet behind it */
-[data-layout='sheets']:not([data-look='forest']) .section-alt .bleed-media {
+[data-layout='sheets'] .section-alt .bleed-media {
   mix-blend-mode: multiply;
 }
 
@@ -168,8 +167,7 @@
   padding-bottom: calc(32px + var(--sheet-r));
 }
 
-[data-layout='sheets'] .section:is(.uses, #team),
-[data-layout='sheets']:not([data-look='forest']) .section#progress {
+[data-layout='sheets'] .section:is(.uses, #progress, #team) {
   padding-bottom: calc(96px + var(--sheet-r));
 }
 
@@ -186,8 +184,7 @@
 }
 
 @media (max-width: 760px) {
-  [data-layout='sheets'] .section:is(.uses, #team),
-  [data-layout='sheets']:not([data-look='forest']) .section#progress {
+  [data-layout='sheets'] .section:is(.uses, #progress, #team) {
     padding-bottom: calc(64px + var(--sheet-r));
   }
 
@@ -197,149 +194,10 @@
 }
 
 /* ==========================================================================
-   FOREST
-   Pale lichen grey and deep forest green in turn.
-   ========================================================================== */
-
-[data-look='forest'] {
-  --deep: #17392d;
-  --deeper: #0f271e;
-  --sheet: #e6e8e3;
-  --sheet-shadow: rgb(15 39 30 / 0.35);
-  --s1: var(--sheet);
-  --s2: var(--panel);
-  --s3: var(--deep);
-  --s4: var(--sheet);
-  --s5: var(--sheet);
-  --s6: var(--deep);
-  --s-foot: var(--deeper);
-
-  --bg: #d9dbd8;
-  --panel: #f2f3ef;
-  --surface: #f2f3ef;
-  --ink: #141d18;
-  --muted: #535e57;
-  --line: #c0c6be;
-  --accent: #1f5c45;
-  --accent-fill: #1d4d3b;
-  --accent-hover: #27634c;
-  --accent-ink: #f0f4ec;
-  --bg-rgb: 217 219 216;
-  --ink-rgb: 20 29 24;
-  --line-rgb: 192 198 190;
-  --accent-rgb: 29 77 59;
-}
-
-[data-look='forest'] body::after {
-  opacity: 0.04;
-}
-
-[data-look='forest'] :is(#story, #contact, .footer) {
-  --tone: dark;
-  --ink: #edf2e9;
-  --muted: #a7bcae;
-  --line: #2c5544;
-  --accent: #bfdcaa;
-  --accent-fill: #d3e6c0;
-  --accent-hover: #e3f1d4;
-  --accent-ink: #0f271e;
-  --accent-rgb: 211 230 192;
-}
-
-[data-look='forest'] .panel-kicker {
-  color: #cfe5bd;
-}
-
-[data-look='forest'][data-top-tone='dark'] .header {
-  --bg-rgb: 19 49 39;
-  --line-rgb: 44 85 68;
-  --ink: #edf2e9;
-  --muted: #a7bcae;
-  --accent: #bfdcaa;
-}
-
-/* ==========================================================================
-   TWILIGHT
-   Cool studio grey by day, blue night, the motor's orange as the one accent:
-   pale, haze, night, and the same three again.
-   ========================================================================== */
-
-[data-look='twilight'] {
-  --mist: #ecedf1;
-  --haze: #bcc3d3;
-  --night-1: #171d2c;
-  --night-3: #0a0d15;
-  /* last light on the upper edge of the night sheet */
-  --glow-rgb: 238 140 84;
-  --sheet-shadow: rgb(10 13 21 / 0.4);
-  --s1: var(--mist);
-  --s2: var(--haze);
-  --s3:
-    radial-gradient(ellipse 70% 300px at 22% 0%, rgb(var(--glow-rgb) / 0.4), rgb(var(--glow-rgb) / 0) 70%),
-    linear-gradient(to bottom, #3b3e66 0%, #262b47 22%, var(--night-1) 52%);
-  --s4: var(--mist);
-  --s5: var(--haze);
-  --s6: linear-gradient(to bottom, #1d2439, var(--night-3));
-  --s-foot: var(--night-3);
-
-  /* a step darker than the first sheet so its shoulders read against the hero */
-  --bg: #d3d5db;
-  --panel: #e6e7ea;
-  --surface: #e6e7ea;
-  --ink: #161922;
-  --muted: #4a4f5c;
-  --line: #a9aebb;
-  --accent: #b8420d;
-  --bg-rgb: 211 213 219;
-  --ink-rgb: 22 25 34;
-  --line-rgb: 169 174 187;
-}
-
-[data-look='twilight'] body::after {
-  opacity: 0.05;
-}
-
-[data-look='twilight'] :is(#story, #contact, .footer) {
-  --tone: dark;
-  --panel: #1f2638;
-  --surface: #1f2638;
-  --ink: #e8eaf1;
-  --muted: #979eb2;
-  --line: #2e3649;
-  --accent: #f58a4b;
-  --line-rgb: 46 54 73;
-  color: var(--ink);
-}
-
-[data-look='twilight'] :is(.section-alt, #team) {
-  --muted: #434856;
-  --line: #9ba3b6;
-  --surface: #cfd4e0;
-}
-
-/* the bird comes out of the dark rather than sitting in a frame */
-[data-look='twilight'] .section-night .bleed-media {
-  mask-image: linear-gradient(to right, transparent 0%, #000 34%);
-}
-
-[data-look='twilight'][data-top-tone='dark'] .header {
-  --bg-rgb: 17 22 34;
-  --line-rgb: 46 54 73;
-  --ink: #e8eaf1;
-  --muted: #979eb2;
-  --accent: #f58a4b;
-}
-
-@media (max-width: 760px) {
-  [data-look='twilight'] .section-night .bleed-media {
-    mask-image: none;
-  }
-}
-
-/* ==========================================================================
    LICHEN
-   The green the client liked on the reference site (#bdcca1 on green-black),
-   kept mostly dark like there, with one whole sheet in that green.
+   The green the client liked on the reference site (#bdcca1 on green-black).
+   As there, the green is only an accent on the dark sheets, never a whole
+   sheet (the client rejected a pale green Progress sheet).
    ========================================================================== */
 
 [data-look='lichen'] {
@@ -349,9 +207,9 @@
   --s1: #131917;
   --s2: var(--stone);
   --s3: #0d1110;
-  --s4: var(--lichen);
-  --s5: var(--stone);
-  --s6: #0d1110;
+  --s4: #eff1ea;
+  --s5: #131917;
+  --s6: var(--stone);
   --s-foot: #090d0b;
 
   --bg: #d6d8d4;
@@ -361,37 +219,31 @@
   --muted: #4c564b;
   --line: #bcc3b1;
   --accent: #3f5230;
-  --accent-fill: var(--lichen);
-  --accent-hover: #cfdcb6;
-  --accent-ink: #10150f;
+  --accent-fill: #2c3f24;
+  --accent-hover: #3d5632;
+  --accent-ink: #edf0e9;
   --bg-rgb: 214 216 212;
   --ink-rgb: 16 21 18;
   --line-rgb: 188 195 177;
-  --accent-rgb: 63 82 48;
+  --accent-rgb: 44 63 36;
 }
 
 [data-look='lichen'] body::after {
   opacity: 0.05;
 }
 
-[data-look='lichen'] :is(.key-facts, .uses, #story, #contact, .footer) {
+[data-look='lichen'] :is(.key-facts, .uses, #story, #team, .footer) {
   --tone: dark;
   --surface: #19211d;
   --ink: #edf0e9;
   --muted: #a4aea6;
   --line: #2b342f;
   --accent: var(--lichen);
+  --accent-fill: var(--lichen);
+  --accent-hover: #cfdcb6;
+  --accent-ink: #10150f;
   --line-rgb: 43 52 47;
   --accent-rgb: 189 204 161;
-}
-
-/* the green sheet: everything on it is dark green, not black */
-[data-look='lichen'] #progress {
-  --muted: #3b4733;
-  --line: #9daf80;
-  --accent: #26361f;
-  --accent-fill: #26361f;
-  --accent-rgb: 38 54 31;
 }
 
 [data-look='lichen'] .panel-kicker {
@@ -461,134 +313,4 @@
   --ink: #e9f1f2;
   --muted: #9bb4b9;
   --accent: #ff8a4c;
-}
-
-/* ==========================================================================
-   SIGNAL
-   What most drone makers do: black, white and grey, colour left to the
-   photos. Here the greys are the airframe's anthracite and the page ends on
-   one sheet in the motor's orange.
-   ========================================================================== */
-
-[data-look='signal'] {
-  --paper: #f3f3f4;
-  --grey: #d7d8db;
-  --sheet-shadow: rgb(10 10 12 / 0.4);
-  --s1: var(--paper);
-  --s2: var(--grey);
-  --s3: #232427;
-  --s4: var(--paper);
-  --s5: var(--grey);
-  --s6: #e0561a;
-  --s-foot: #18191b;
-
-  --bg: #d9d9db;
-  --panel: #eaeaec;
-  --surface: #eaeaec;
-  --ink: #19191b;
-  --muted: #56575c;
-  --line: #c3c4c8;
-  --accent: #c2470f;
-  --bg-rgb: 217 217 219;
-  --ink-rgb: 25 25 27;
-  --line-rgb: 195 196 200;
-}
-
-[data-look='signal'] body::after {
-  content: none;
-}
-
-[data-look='signal'] :is(#story, .footer) {
-  --tone: dark;
-  --surface: #303135;
-  --ink: #ededef;
-  --muted: #a6a7ad;
-  --line: #45464b;
-  --accent: #f27d40;
-  --line-rgb: 69 70 75;
-}
-
-[data-look='signal'] :is(.section-alt, #team) {
-  --muted: #4b4c51;
-  --line: #afb0b5;
-}
-
-/* on the orange sheet the button turns dark */
-[data-look='signal'] #contact {
-  --ink: #170d07;
-  --accent-fill: #170d07;
-  --accent-hover: #3a1b0b;
-  --accent-ink: #f6f1ee;
-}
-
-[data-look='signal'][data-top-tone='dark'] .header {
-  --bg-rgb: 26 27 29;
-  --line-rgb: 69 70 75;
-  --ink: #ededef;
-  --muted: #a6a7ad;
-  --accent: #f27d40;
-}
-
-/* ==========================================================================
-   THERMAL
-   The second camera: indigo night, and a closing sheet in the colours a
-   thermal image runs through, from cold violet to hot amber.
-   ========================================================================== */
-
-[data-look='thermal'] {
-  --cool: #efeef2;
-  --shade: #d5d3df;
-  --sheet-shadow: rgb(11 7 36 / 0.42);
-  --s1: var(--cool);
-  --s2: var(--shade);
-  --s3: linear-gradient(to bottom, #1f1450, #0e0829);
-  --s4: var(--cool);
-  --s5: var(--shade);
-  --s6: linear-gradient(112deg, #1f1050 0%, #5c1a84 30%, #b12a73 56%, #e65a31 80%, #f6a032 100%);
-  --s-foot: #0b0724;
-
-  --bg: #d8d8dc;
-  --panel: #e6e5ec;
-  --surface: #e6e5ec;
-  --ink: #14101f;
-  --muted: #514d5e;
-  --line: #c2c0cc;
-  --accent: #b8420d;
-  --bg-rgb: 216 216 220;
-  --ink-rgb: 20 16 31;
-  --line-rgb: 194 192 204;
-}
-
-[data-look='thermal'] body::after {
-  opacity: 0.05;
-}
-
-[data-look='thermal'] :is(#story, #contact, .footer) {
-  --tone: dark;
-  --surface: #2a1d5c;
-  --ink: #f3f0fa;
-  --muted: #b3abc9;
-  --line: #3a2d6b;
-  --accent: #ffa24a;
-  --line-rgb: 58 45 107;
-}
-
-[data-look='thermal'] :is(.section-alt, #team) {
-  --muted: #474354;
-  --line: #aeabbd;
-}
-
-[data-look='thermal'] #contact {
-  --ink: #fff;
-  --accent-fill: #fff3dc;
-  --accent-hover: #fff;
-  --accent-ink: #1c0d3d;
-}
-
-[data-look='thermal'][data-top-tone='dark'] .header {
-  --bg-rgb: 16 10 44;
-  --line-rgb: 58 45 107;
-  --ink: #f3f0fa;
-  --muted: #b3abc9;
-  --accent: #ffa24a;
 }

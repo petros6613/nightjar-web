@@ -58,7 +58,7 @@ export default function Header() {
           // the route effect only fires when the URL changes, so scroll here too
           onClick={() => isHome && scrollToTop({ smooth: true })}
         >
-          <img src="/images/nightjar-logo.png" alt="" width="61" height="19" />
+          <img src="/images/nightjar-logo.png" alt="" width="95" height="30" />
           <span className="wordmark-text">Nightjar</span>
         </Link>
         <nav className="nav" aria-label="Main">
