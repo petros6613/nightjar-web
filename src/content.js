@@ -167,17 +167,16 @@ export const timeline = {
 }
 
 export const team = {
-  title: 'Two engineers from ČVUT',
+  title: 'Two engineers who build',
   founders: [
     {
       name: 'Zdeněk Janda',
       role: 'Co-founder',
       photo: '/images/zdenek-janda.jpg',
       points: [
-        'Aerospace engineering, ČVUT',
+        'Aerospace engineering, CTU in Prague',
         'Theoretical physics, Charles University',
         'Author of four patents',
-        'Entrepreneur, engineering consultant, R&D',
       ],
     },
     {
