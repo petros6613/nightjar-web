@@ -1,4 +1,5 @@
 // All site copy lives here so it can be edited (or translated) in one place.
+// Style: no full stop at the end of headings and text blocks (full stops between sentences stay).
 
 // TODO: replace with the real address
 export const CONTACT_EMAIL = 'hello@example.com'
@@ -10,7 +11,7 @@ export const HERO_VIDEO = null
 export const hero = {
   eyebrow: 'Technology for those who protect',
   title: 'Nightjar',
-  text: 'A quiet micro-helicopter for police, firefighters and nature conservation.',
+  text: 'Whispering helidrone designed for the unseen',
   image: '/images/nightjar-hero.jpg',
   // TODO: demo only. The wide image has background added by hand; replace with a proper wide render
   imageWide: '/images/nightjar-hero-wide.jpg',
@@ -19,70 +20,85 @@ export const hero = {
 
 // Four facts the client named as the most important
 export const keyFacts = [
-  { value: 'Silent', text: 'Inaudible to people and animals beyond 10 m.' },
-  { value: 'Unobtrusive', text: 'Small visual footprint. Easy to miss, hard to notice.' },
-  { value: '30 cm · 70 g', text: 'The size of a nightjar. Black Hornet class.' },
-  { value: 'Day + thermal', text: 'Two cameras, one view of the situation.' },
+  { value: 'Silent', text: 'Inaudible to people and animals beyond 20 m' },
+  { value: 'Low-profile', text: 'Small visual footprint. Easy to miss, hard to notice' },
+  { value: 'Ø 19 cm · 80 g', text: 'Nano UAV class' },
+  { value: 'Day + thermal', text: 'Two cameras, one view of the situation' },
 ]
 
-// Use-case slideshow
-// TODO: police scene: client wants an AI-generated, more action-oriented image (placeholder for now)
-// TODO: retouch the scene images so they look less AI-generated
+// Use-case panels: generated scenes with the real Nightjar composited in (both rotors spinning)
 export const uses = {
-  title: 'See the situation before you step into it.',
+  title: 'See the situation before you step into it',
   scenes: [
     {
-      image: '/images/forest-silhouette.webp',
-      alt: 'Nightjar silhouette flying between trees',
-      title: 'Police',
-      subtitle: 'Search for people.',
-      text: 'A look at a place before anyone walks in. Quiet enough that nobody notices it is there.',
+      image: '/images/use-security.jpg',
+      alt: 'Nightjar above security guards catching an intruder at night',
+      title: 'Security',
+      subtitle: 'Public and physical protection',
+      text: 'A look around, day or night. Quiet enough that nobody notices it is there',
     },
     {
-      image: '/images/fire-silhouette.webp',
-      alt: 'Nightjar silhouette above a forest fire',
+      image: '/images/use-fire.jpg',
+      alt: 'Nightjar above hikers cut off by a brush fire',
       title: 'Firefighters',
-      subtitle: 'Fire monitoring.',
-      text: 'Thermal view of hot spots and the fire front, from a safe distance.',
+      subtitle: 'Fire monitoring and rescue',
+      text: 'Thermal view of hot spots, the fire front and people in danger, from a safe distance',
     },
     {
-      image: '/images/forest-silhouette.webp',
-      alt: 'Nightjar silhouette over a forest',
-      title: 'Nature conservation',
-      subtitle: 'Wildlife monitoring and preservation.',
-      text: 'Watch animals without disturbing them. At 10 m, they cannot hear it.',
+      image: '/images/use-surveying.jpg',
+      alt: 'Nightjar mapping a narrow tunnel',
+      title: 'Surveying',
+      subtitle: 'Tunnels and tight spaces',
+      text: 'Flies into narrow tunnels and shafts and maps the space around it',
     },
   ],
 }
 
-// Technology: kept simple on purpose, the client wants a non-engineer to follow it
+// Technology: kept simple on purpose, the client wants a non-engineer to follow it.
+// Two stacked photos: Nightjar's rotor head above a conventional one (swashplate, linkages, servos).
+// A point with a `badge` is drawn framed, with the badge on the frame's top-right corner.
 export const technology = {
-  title: 'Streamlined design.',
-  lead: 'One motor drives the main rotor. No swashplate. Patent pending.',
-  image: '/images/slide-rotor.jpg',
-  imageAlt: 'Nightjar rotor head',
+  title: 'Streamlined rotor design',
+  lead: 'A single motor both drives the main rotor and controls the flight',
+  photos: [
+    { src: '/images/tech-rotor-nightjar.jpg', alt: 'Nightjar rotor head', caption: 'Nightjar' },
+    {
+      src: '/images/tech-rotor-conventional.jpg',
+      alt: 'Conventional helicopter rotor head with swashplate and linkages',
+      caption: 'Conventional rotor head',
+    },
+  ],
   points: [
     {
-      title: 'One motor instead of four',
-      text: 'Micro-helicopters in this class usually need four motors to steer the main rotor. Nightjar needs one.',
+      title: 'Mechanically simple, physically advanced',
+      text: 'Micro-helicopters in this class need three extra servos to control the main rotor. Nightjar needs none',
+      badge: 'Core innovation · Patent pending',
     },
     {
-      title: 'Fewer moving parts',
-      text: 'No swashplate, no linkages. Less to break, less to adjust. More reliable.',
+      title: 'Quieter',
+      text: 'Inaudible beyond 20 m. Up close, it is instinctively mistaken for a small flying animal',
+    },
+    {
+      title: 'Day + thermal camera',
+      text: 'Full HD live view, thermal imaging, or both overlaid in one image',
+    },
+    {
+      title: 'More reliable',
+      text: 'No swashplate, no linkages, no extra servos. Fewer parts to wear out, break or adjust',
     },
     {
       title: 'Longer in the air',
-      text: 'A simpler, more efficient rotor means longer flight time and more time in action.',
+      text: 'Efficient main rotor control means longer flights, more time in action and less downtime',
     },
   ],
 }
 
 // TODO: the client will send the full story text
 export const story = {
-  title: 'Named after a bird nobody notices.',
+  title: 'Named after a bird nobody notices',
   paragraphs: [
-    'The nightjar is a bird of dusk. By day it blends into its surroundings; in low light it moves.',
-    'That is the idea behind our aircraft: small, quiet, and useful exactly when it matters.',
+    'The nightjar is a bird of dusk. By day it blends into its surroundings; in low light it moves',
+    'That is the idea behind our aircraft: small, quiet, and useful exactly when it matters',
   ],
   photo: '/images/nightjar-resting.jpg',
   photoAlt: 'A nightjar resting on a branch',
@@ -97,13 +113,13 @@ const timelineSteps = [
 
 export const timeline = {
   // built from the first and last step so the heading cannot drift from the data
-  title: `Flight tests in ${timelineSteps[0].year}. On sale in ${timelineSteps.at(-1).year}.`,
+  title: `Flight tests in ${timelineSteps[0].year}. On sale in ${timelineSteps.at(-1).year}`,
   now: 'We are here',
   steps: timelineSteps,
 }
 
 export const team = {
-  title: 'Two engineers from ČVUT.',
+  title: 'Two engineers from ČVUT',
   founders: [
     {
       name: 'Zdeněk Janda',
@@ -131,6 +147,6 @@ export const team = {
 
 export const contact = {
   title: 'Contact us',
-  text: 'We are open to collaboration.',
+  text: 'We are open to collaboration',
   action: 'Write to us',
 }
