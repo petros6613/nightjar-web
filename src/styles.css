@@ -1248,9 +1248,11 @@ a {
 
 .timeline {
   --progress: 0;
+  --steps: 4;
+  --current: 0;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--steps), minmax(0, 1fr));
   padding-top: 40px;
 }
 
@@ -1265,9 +1267,12 @@ a {
   border-radius: 2px;
 }
 
+/* past the current step the rail fades out: what comes next is still open */
 .timeline::before {
   right: 0;
   background: var(--line);
+  -webkit-mask-image: linear-gradient(to right, #000 calc(var(--progress) * 100%), transparent 100%);
+  mask-image: linear-gradient(to right, #000 calc(var(--progress) * 100%), transparent 100%);
 }
 
 .timeline::after {
@@ -1315,9 +1320,23 @@ a {
   }
 }
 
+/* the open end */
+.timeline li.is-next {
+  opacity: 0.45;
+}
+
+.timeline-when,
 .timeline-year,
 .timeline-title {
   display: block;
+}
+
+.timeline-when {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .timeline-year {
@@ -1358,15 +1377,18 @@ a {
     right: auto;
     bottom: 0;
     height: auto;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(var(--progress) * 100%), transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 calc(var(--progress) * 100%), transparent 100%);
   }
 
   .timeline::after {
     transition-property: height;
   }
 
+  /* down to the current step's dot: each step takes about (height + gap) / steps, dot 30 px into it */
   .is-visible .timeline::after {
     width: 4px;
-    height: 30px;
+    height: calc(var(--current) * (100% + 32px) / var(--steps) + 30px);
   }
 
   .timeline li {

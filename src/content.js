@@ -152,15 +152,16 @@ export const story = {
 }
 
 const timelineSteps = [
-  { year: '2026', title: 'Prototype and flight tests', current: true },
-  { year: '2027', title: 'Field demo with first users' },
-  { year: '2028', title: 'Pilot fleets' },
-  { year: '2029', title: 'On sale' },
+  { when: 'Early', year: '2025', title: 'The idea of a swashplateless helicopter rotor' },
+  { when: 'November', year: '2025', title: 'Proof of concept' },
+  { when: 'February', year: '2026', title: 'Nightjar Aero s.r.o. founded' },
+  { when: 'November', year: '2026', title: 'First flight', current: true },
+  // open end: no date, drawn faded, the rail fades out towards it
+  { when: 'Coming', year: 'Next', title: 'Field demo with first users', next: true },
 ]
 
 export const timeline = {
-  // built from the first and last step so the heading cannot drift from the data
-  title: `Flight tests in ${timelineSteps[0].year}. On sale in ${timelineSteps.at(-1).year}`,
+  title: 'From idea to first flight in under two years',
   now: 'We are here',
   steps: timelineSteps,
 }
