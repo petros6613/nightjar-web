@@ -38,21 +38,21 @@ export const uses = {
   scenes: [
     {
       image: '/images/use-security.jpg',
-      alt: 'Nightjar above security guards catching an intruder at night',
+      alt: 'Nightjar day and thermal view from above: three intruders cutting the fence of a guarded compound at night',
       title: 'Security',
       subtitle: 'Public and physical protection',
       text: 'A look around, day or night. Quiet enough that nobody notices it is there',
     },
     {
       image: '/images/use-fire.jpg',
-      alt: 'Nightjar above hikers cut off by a brush fire',
+      alt: 'Nightjar thermal view from above a burning building in a city block, with a hidden hot spot under the smoke',
       title: 'Firefighters',
       subtitle: 'Fire monitoring and rescue',
       text: 'Thermal view of hot spots, the fire front and people in danger, from a safe distance',
     },
     {
       image: '/images/use-surveying.jpg',
-      alt: 'Nightjar mapping a narrow tunnel',
+      alt: 'Nightjar flying into a narrow tunnel to map it',
       title: 'Surveying',
       subtitle: 'Tunnels and tight spaces',
       text: 'Flies into narrow tunnels and shafts and maps the space around it',
