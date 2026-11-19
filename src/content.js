@@ -10,7 +10,7 @@ export const HERO_VIDEO = null
 
 // Shown large at the end of Technology, and (title only) small in the hero
 export const origin = {
-  title: 'Proudly designed and made in Europe',
+  title: 'Proudly designed and made in the EU',
   text: 'All components sourced from the EU and the USA',
 }
 
