@@ -1,4 +1,5 @@
-import { HERO_VIDEO, hero } from '../content.js'
+import { HERO_VIDEO, hero, origin } from '../content.js'
+import { EuFlag } from '../components/MadeInEurope.jsx'
 
 export default function Hero() {
   return (
@@ -13,9 +14,16 @@ export default function Hero() {
         </picture>
       )}
       <div className="container hero-content">
-        <p className="eyebrow">{hero.eyebrow}</p>
-        <h1>{hero.title}</h1>
-        <p className="hero-text">{hero.text}</p>
+        <div className="hero-copy">
+          <p className="eyebrow">{hero.eyebrow}</p>
+          <h1>{hero.title}</h1>
+          <p className="hero-text">{hero.text}</p>
+        </div>
+        {/* bottom-right, level with the intro line: adds no height, so the text stays clear of the render */}
+        <p className="hero-made-in">
+          <EuFlag />
+          <span>{origin.title}</span>
+        </p>
       </div>
     </div>
   )

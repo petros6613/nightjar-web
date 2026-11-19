@@ -1,6 +1,6 @@
 // Flag of the European Union: 3:2, twelve five-pointed stars on a circle of radius 1/3 of
 // the height, each star's outer radius 1/18 of the height, one point straight up.
-function EuFlag() {
+export function EuFlag() {
   const H = 20
   const ring = H / 3
   const outer = H / 18

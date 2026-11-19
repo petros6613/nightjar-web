@@ -8,6 +8,12 @@ export const CONTACT_EMAIL = 'hello@example.com'
 // to its path (e.g. '/video/hero.mp4') and the Hero swaps the silhouette for it.
 export const HERO_VIDEO = null
 
+// Shown large at the end of Technology, and (title only) small in the hero
+export const origin = {
+  title: 'Designed and proudly made in Europe',
+  text: 'All components sourced from Europe and the USA',
+}
+
 export const hero = {
   eyebrow: 'Technology for those who protect',
   title: 'Nightjar',
@@ -127,10 +133,7 @@ export const technology = {
     },
     note: 'Drawn to scale. Quadcopter: the smallest class that carries day + thermal cameras for 30+ min',
   },
-  origin: {
-    title: 'Designed and proudly made in Europe',
-    text: 'All components sourced from Europe and the USA',
-  },
+  origin,
 }
 
 // TODO: the client will send the full story text
