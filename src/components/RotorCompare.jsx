@@ -151,6 +151,7 @@ export default function RotorCompare({ compare }) {
                 </p>
                 <NoiseBar who={nightjar.name} metres={p.nightjar} max={maxMetres} className="is-nightjar" />
                 <NoiseBar who={quad.short} metres={p.quad} max={maxMetres} className="is-quad" />
+                {p.aside && <p className="noise-aside">{p.aside}</p>}
               </div>
             ))}
           </div>

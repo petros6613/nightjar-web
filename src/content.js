@@ -76,11 +76,7 @@ export const technology = {
     },
     {
       title: 'Quieter',
-      text: 'Inaudible beyond 10 m. Up close, it is instinctively mistaken for a small flying animal',
-    },
-    {
-      title: 'Day + thermal camera',
-      text: 'Full HD live view, thermal imaging, or both overlaid in one image',
+      text: 'Inaudible beyond 10 m. No buzzing servos, so nothing sounds like a machine',
     },
     {
       title: 'More reliable',
@@ -120,10 +116,20 @@ export const technology = {
       title: 'Inaudible beyond',
       places: [
         { place: 'On a typical street', ambient: '≈ 55 dB', nightjar: 10, quad: 50 },
-        { place: 'In a forest', ambient: '≈ 40 dB', nightjar: 25, quad: 150 },
+        {
+          place: 'In a forest',
+          ambient: '≈ 40 dB',
+          nightjar: 25,
+          quad: 150,
+          aside: 'At 10 m, Nightjar is instinctively mistaken for a small flying animal',
+        },
       ],
     },
     note: 'Drawn to scale. Quadcopter: the smallest class that carries day + thermal cameras for 30+ min',
+  },
+  origin: {
+    title: 'Designed and proudly made in Europe',
+    text: 'All components sourced from Europe and the USA',
   },
 }
 

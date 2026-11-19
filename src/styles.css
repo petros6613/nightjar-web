@@ -1059,6 +1059,57 @@ a {
   color: var(--accent);
 }
 
+/* a remark under one place's bars */
+.noise-aside {
+  max-width: 44ch;
+  margin-top: 12px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Made in Europe: closing row of the Technology section */
+.made-in {
+  grid-column: 1 / -1;
+  padding-block: 40px 48px;
+  border-top: 1px solid var(--line);
+}
+
+.made-in-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.eu-flag {
+  flex: none;
+  width: 60px;
+  height: 40px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgb(var(--ink-rgb) / 0.12);
+}
+
+.made-in p {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.made-in strong {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.made-in span {
+  color: var(--muted);
+  font-size: 16px;
+}
+
 .compare-note {
   max-width: 70ch;
   margin-top: 40px;
