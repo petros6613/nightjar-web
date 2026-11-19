@@ -85,8 +85,22 @@ function QuadTop({ width, length }) {
   )
 }
 
+// One distance bar; widths are relative to the longest distance in the noise comparison
+function NoiseBar({ who, metres, max, className }) {
+  return (
+    <div className={`noise-bar ${className}`}>
+      <span className="noise-who">{who}</span>
+      <span className="noise-track">
+        <span className="noise-fill" style={{ width: `${(metres / max) * 100}%` }} />
+        <span className="noise-m">{metres}&nbsp;m</span>
+      </span>
+    </div>
+  )
+}
+
 export default function RotorCompare({ compare }) {
-  const { nightjar, quad } = compare
+  const { nightjar, quad, noise } = compare
+  const maxMetres = Math.max(...noise.places.map((p) => Math.max(p.nightjar, p.quad)))
   return (
     <div className="rotor-compare">
       <div className="container">
@@ -125,6 +139,21 @@ export default function RotorCompare({ compare }) {
               <span className="compare-weight">{quad.weight}</span>
             </figcaption>
           </figure>
+        </div>
+
+        <div className="compare-noise">
+          <h4 className="compare-noise-title">{noise.title}</h4>
+          <div className="noise-places">
+            {noise.places.map((p) => (
+              <div className="noise-place" key={p.place}>
+                <p className="noise-where">
+                  {p.place} <span>({p.ambient})</span>
+                </p>
+                <NoiseBar who={nightjar.name} metres={p.nightjar} max={maxMetres} className="is-nightjar" />
+                <NoiseBar who={quad.short} metres={p.quad} max={maxMetres} className="is-quad" />
+              </div>
+            ))}
+          </div>
         </div>
 
         <p className="compare-note">{compare.note}</p>

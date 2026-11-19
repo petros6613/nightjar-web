@@ -980,6 +980,85 @@ a {
   stroke-linejoin: round;
 }
 
+/* Noise: distance beyond which each aircraft is no longer heard, bars to one scale */
+.compare-noise {
+  max-width: 1180px;
+  margin-top: 64px;
+}
+
+.compare-noise-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.noise-places {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px clamp(32px, 5vw, 80px);
+  margin-top: 20px;
+}
+
+.noise-where {
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.noise-where span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.noise-bar {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding-block: 5px;
+  font-size: 15px;
+}
+
+.noise-who {
+  color: var(--muted);
+}
+
+/* the right padding keeps room for the distance label after a full-length bar */
+.noise-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 64px;
+}
+
+.noise-fill {
+  flex: none;
+  min-width: 6px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.noise-bar.is-nightjar .noise-fill {
+  background: var(--accent);
+}
+
+.noise-bar.is-quad .noise-fill {
+  background: var(--muted);
+}
+
+.noise-m {
+  flex: none;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.noise-bar.is-nightjar .noise-m {
+  color: var(--accent);
+}
+
 .compare-note {
   max-width: 70ch;
   margin-top: 40px;
@@ -1015,6 +1094,19 @@ a {
     justify-self: center;
     width: 100%;
     max-width: 260px;
+  }
+
+  .compare-noise {
+    margin-top: 48px;
+  }
+
+  .noise-places {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .noise-bar {
+    grid-template-columns: 92px minmax(0, 1fr);
   }
 }
 

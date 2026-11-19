@@ -108,10 +108,20 @@ export const technology = {
     },
     quad: {
       name: 'Comparable quadcopter',
+      short: 'Quadcopter',
       rotors: 'Four smaller rotors',
       weight: '≈ 500 g',
       width: '37 cm',
       length: '28 cm',
+    },
+    // Distance (m) beyond which each aircraft is no longer heard, in the given background noise.
+    // Quad: from its declared sound power (84 dB(A)); Nightjar: target values, to be confirmed by measurement.
+    noise: {
+      title: 'Inaudible beyond',
+      places: [
+        { place: 'On a typical street', ambient: '≈ 55 dB', nightjar: 10, quad: 50 },
+        { place: 'In a forest', ambient: '≈ 40 dB', nightjar: 25, quad: 150 },
+      ],
     },
     note: 'Drawn to scale. Quadcopter: the smallest class that carries day + thermal cameras for 30+ min',
   },
