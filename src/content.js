@@ -31,7 +31,7 @@ export const hero = {
 // Four facts the client named as the most important
 export const keyFacts = [
   { value: 'Silent', text: 'Inaudible to people and animals beyond 10 m' },
-  { value: 'Low-profile', text: 'Small visual footprint. Easy to miss, hard to notice' },
+  { value: 'Low-profile', text: 'Small visual footprint, easy to miss, hard to notice' },
   { value: 'Ø 19 cm · 80 g', text: 'Nano UAV class' },
   { value: 'Day + thermal', text: 'Two cameras, one view of the situation' },
 ]
