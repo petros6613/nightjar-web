@@ -800,6 +800,224 @@ a {
   }
 }
 
+/* Technology: Nightjar vs a quadcopter with the same mission, top views to one scale */
+.rotor-compare {
+  grid-column: 1 / -1;
+  padding-block: 88px 96px;
+  border-top: 1px solid var(--line);
+}
+
+.compare-title {
+  max-width: 20ch;
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.compare-lead {
+  max-width: 60ch;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+/* Columns sized in proportion to each drawing's viewBox width (Nightjar 270, quad 432),
+   so both drawings share one scale. Row 1 = drawings, row 2 = captions (lined up via subgrid). */
+.compare-figure {
+  display: grid;
+  grid-template-columns: minmax(0, 270fr) auto minmax(0, 432fr);
+  grid-template-rows: auto auto;
+  column-gap: clamp(20px, 3vw, 48px);
+  max-width: 1180px;
+  margin-top: 56px;
+}
+
+.compare-item {
+  display: grid;
+  grid-row: 1 / span 2;
+  grid-template-rows: subgrid;
+  min-width: 0;
+  margin: 0;
+}
+
+.compare-art {
+  align-self: center;
+}
+
+.compare-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.compare-art .disc {
+  stroke-width: 2.5;
+}
+
+.compare-art .disc.nj {
+  fill: rgb(var(--accent-rgb) / 0.08);
+  stroke: var(--accent);
+}
+
+.compare-art .disc.quad {
+  fill: rgb(var(--ink-rgb) / 0.04);
+  stroke: var(--muted);
+}
+
+.compare-art .blade.nj {
+  fill: var(--accent);
+}
+
+.compare-art .blade.quad {
+  fill: var(--muted);
+}
+
+.compare-art .tail {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.compare-art .body {
+  fill: var(--ink);
+}
+
+.compare-art .arm {
+  stroke: var(--ink);
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+
+.compare-art .hub {
+  fill: var(--panel);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+
+.compare-art .dim line {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+
+.compare-art .dim text {
+  fill: var(--ink);
+  font: 700 17px var(--font);
+}
+
+.compare-item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.compare-item figcaption strong {
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.compare-item figcaption span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.compare-item figcaption .compare-weight {
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: clamp(32px, 3.2vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.is-nightjar figcaption .compare-weight {
+  color: var(--accent);
+}
+
+/* "same mission" between the two drawings, with a double-headed arrow */
+.compare-mission {
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: clamp(150px, 13vw, 180px);
+  text-align: center;
+}
+
+.compare-mission span {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.compare-mission small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.compare-arrow {
+  width: 100%;
+  height: auto;
+  margin-block: 6px 4px;
+  overflow: visible;
+}
+
+.compare-arrow path {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.compare-note {
+  max-width: 70ch;
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .rotor-compare {
+    padding-block: 64px 72px;
+  }
+
+  .compare-figure {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    row-gap: 28px;
+    margin-top: 40px;
+  }
+
+  .compare-item {
+    display: block;
+    grid-row: auto;
+  }
+
+  /* stacked: widths stay proportional to the drawings (Nightjar 270 : quad 432) */
+  .compare-item.is-nightjar .compare-art {
+    width: calc(270 / 432 * 100%);
+  }
+
+  .compare-mission {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
 
 /* Story */
 

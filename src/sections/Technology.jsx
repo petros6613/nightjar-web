@@ -1,5 +1,6 @@
 import useReveal from '../hooks/useReveal.js'
 import { technology } from '../content.js'
+import RotorCompare from '../components/RotorCompare.jsx'
 
 // Photos bleed to the left edge of the screen, copy sits in the right half aligned with the text container
 export default function Technology() {
@@ -41,6 +42,8 @@ export default function Technology() {
           </div>
         </div>
       </div>
+      {/* full-width row under the photos and points */}
+      <RotorCompare compare={technology.compare} />
     </section>
   )
 }

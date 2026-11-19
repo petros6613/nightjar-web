@@ -91,6 +91,30 @@ export const technology = {
       text: 'Efficient main rotor control means longer flights, more time in action and less downtime',
     },
   ],
+  // To-scale size comparison under the rotor heads (drawn in RotorCompare.jsx).
+  // Quadcopter = the smallest class found that carries day + thermal cameras for 30+ min
+  // (e.g. Parrot ANAFI USA: 282 × 373 mm unfolded, 500 g, 32 min).
+  compare: {
+    title: 'Why one larger lifting rotor?',
+    lead: 'Same mission at a fraction of the weight: lower RPM, higher efficiency, lower acoustic signature',
+    mission: 'Same mission',
+    missionDetail: ['30+ min in the air', 'Day + thermal camera'],
+    nightjar: {
+      name: 'Nightjar',
+      rotors: 'One main rotor, tail stabilisation',
+      weight: '80 g',
+      rotor: 'Ø 19 cm',
+      length: '25 cm',
+    },
+    quad: {
+      name: 'Comparable quadcopter',
+      rotors: 'Four smaller rotors',
+      weight: '≈ 500 g',
+      width: '37 cm',
+      length: '28 cm',
+    },
+    note: 'Drawn to scale. Quadcopter: the smallest class that carries day + thermal cameras for 30+ min',
+  },
 }
 
 // TODO: the client will send the full story text
