@@ -2,8 +2,7 @@
 // Style: no full stop after headings, short labels and the Use panels (those use commas instead).
 // The Technology points and the Story paragraphs are full sentences and end with a full stop.
 
-// TODO: replace with the real address
-export const CONTACT_EMAIL = 'hello@example.com'
+export const CONTACT_EMAIL = 'info@nightjar-aero.com'
 
 // Hero: silhouette for now. When the client delivers the video, set HERO_VIDEO
 // to its path (e.g. '/video/hero.mp4') and the Hero swaps the silhouette for it.
