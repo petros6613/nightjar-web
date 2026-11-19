@@ -177,6 +177,8 @@ export const team = {
         'Aerospace engineering, CTU in Prague',
         'Theoretical physics, Charles University',
         'Author of four patents',
+        'Entrepreneur, simulation & structural engineer',
+        'R&D',
       ],
     },
     {
@@ -184,8 +186,9 @@ export const team = {
       role: 'Co-founder',
       photo: '/images/peter-prazenica.jpg',
       points: [
-        'Materials and manufacturing engineering, ČVUT',
-        'Racing car team',
+        'Materials and manufacturing engineering, CTU in Prague',
+        'eForce Prague Formula Student alumni',
+        'Hands-on builder',
         'R&D',
       ],
     },
