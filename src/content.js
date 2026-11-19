@@ -82,7 +82,7 @@ export const technology = {
     },
     {
       title: 'Quieter',
-      text: 'Inaudible beyond 10 m. No buzzing servos, so nothing sounds like a machine',
+      text: 'Inaudible beyond 10 m. Instinctively mistaken for a small flying animal. No buzzing servos, so nothing sounds like a machine',
     },
     {
       title: 'More reliable',
