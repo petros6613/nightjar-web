@@ -1,5 +1,6 @@
 // All site copy lives here so it can be edited (or translated) in one place.
-// Style: no full stop at the end of headings and text blocks (full stops between sentences stay).
+// Style: no full stop after headings, short labels and the Use panels (those use commas instead).
+// The Technology points and the Story paragraphs are full sentences and end with a full stop.
 
 // TODO: replace with the real address
 export const CONTACT_EMAIL = 'hello@example.com'
@@ -19,8 +20,11 @@ export const hero = {
   title: 'Nightjar',
   text: 'Whispering helidrone designed for the unseen',
   image: '/images/nightjar-hero.jpg',
-  // TODO: demo only. The wide image has background added by hand; replace with a proper wide render
+  // TODO: demo only. The wide images have background added by hand; replace with a proper wide render.
+  // Two wide versions: the large one (bigger, lower, more central) on monitors >= 1580 px wide with an
+  // aspect ratio up to 2.35; the other everywhere else above 760 px, where the tall heading needs the room.
   imageWide: '/images/nightjar-hero-wide.jpg',
+  imageLarge: '/images/nightjar-hero-large.jpg',
   imageAlt: 'Nightjar micro-helicopter render',
 }
 
@@ -41,7 +45,7 @@ export const uses = {
       alt: 'Nightjar day and thermal view from above: three intruders cutting the fence of a guarded compound at night',
       title: 'Security',
       subtitle: 'Public and physical protection',
-      text: 'A look around, day or night. Quiet enough that nobody notices it is there',
+      text: 'A look around, day or night, quiet enough that nobody notices it is there',
     },
     {
       image: '/images/use-fire.jpg',
@@ -77,20 +81,20 @@ export const technology = {
   points: [
     {
       title: 'Mechanically simple, physically advanced',
-      text: 'Micro-helicopters in this class need three extra servos to control the main rotor. Nightjar needs none',
+      text: 'Micro-helicopters in this class need three extra servos to control the main rotor. Nightjar needs none.',
       badge: 'Core innovation · Patent pending',
     },
     {
       title: 'Quieter',
-      text: 'Inaudible beyond 10 m. Instinctively mistaken for a small flying animal. No buzzing servos, so nothing sounds like a machine',
+      text: 'Inaudible beyond 10 m. Instinctively mistaken for a small flying animal. No buzzing servos, so nothing sounds like a machine.',
     },
     {
       title: 'More reliable',
-      text: 'No swashplate, no linkages, no extra servos. Fewer parts to wear out, break or adjust',
+      text: 'No swashplate, no linkages, no extra servos. Fewer parts to wear out, break or adjust.',
     },
     {
       title: 'Longer in the air',
-      text: 'Efficient main rotor control means longer flights, more time in action and less downtime',
+      text: 'Efficient main rotor control means longer flights, more time in action and less downtime.',
     },
   ],
   // To-scale size comparison under the rotor heads (drawn in RotorCompare.jsx).
@@ -140,8 +144,8 @@ export const technology = {
 export const story = {
   title: 'Named after a bird nobody notices',
   paragraphs: [
-    'The nightjar is a bird of dusk. By day it blends into its surroundings; in low light it moves',
-    'That is the idea behind our aircraft: small, quiet, and useful exactly when it matters',
+    'The nightjar is a bird of dusk. By day it blends into its surroundings; in low light it moves.',
+    'That is the idea behind our aircraft: small, quiet, and useful exactly when it matters.',
   ],
   photo: '/images/nightjar-resting.jpg',
   photoAlt: 'A nightjar resting on a branch',

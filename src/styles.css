@@ -245,7 +245,8 @@ a {
   margin-top: calc(-1 * var(--header-h));
   height: 100svh;
   min-height: 560px;
-  max-height: 980px;
+  /* very wide screens get a taller hero (up to 40 % of the width), so the heading stays clear of the render */
+  max-height: max(980px, 40vw);
   overflow: hidden;
   isolation: isolate;
 }
