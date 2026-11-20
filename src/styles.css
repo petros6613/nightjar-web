@@ -1411,7 +1411,7 @@ a {
 
 .team > li {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
   gap: 28px;
   align-items: end;
 }
@@ -1477,6 +1477,10 @@ a {
   .team > li {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .portrait {
+    width: 80%;
   }
 
   .team h3 {
