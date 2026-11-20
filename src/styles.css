@@ -172,18 +172,19 @@ a {
   height: var(--header-h);
 }
 
+/* logo and name 50 % larger than at launch (were 19 px and 18 px) */
 .wordmark {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 27px;
   letter-spacing: -0.02em;
 }
 
 .wordmark img {
   display: block;
-  height: 19px;
+  height: 29px;
   width: auto;
   /* the logo file is white; invert it for the light theme */
   filter: invert(1);
@@ -220,7 +221,7 @@ a {
   }
 
   .wordmark img {
-    height: 14px;
+    height: 21px;
   }
 
   .nav {
@@ -232,6 +233,24 @@ a {
   .nav a[href='/#story'],
   .nav a[href='/#progress'] {
     display: none;
+  }
+}
+
+/* the larger logo: on narrow tablets the menu moves closer together so "Contact us" stays on one line */
+@media (min-width: 761px) and (max-width: 820px) {
+  .nav {
+    gap: 20px;
+  }
+}
+
+/* very small phones (320 px): the logo at its earlier size and the links a little closer, so they fit on one line */
+@media (max-width: 359px) {
+  .wordmark img {
+    height: 14px;
+  }
+
+  .nav {
+    gap: 8px;
   }
 }
 
