@@ -4,6 +4,9 @@
 
 export const CONTACT_EMAIL = 'info@nightjar-aero.com'
 
+// Footer, between the company name and the e-mail
+export const FOOTER_LOCATION = 'HQ and R&D facility in Prague'
+
 // Hero: silhouette for now. When the client delivers the video, set HERO_VIDEO
 // to its path (e.g. '/video/hero.mp4') and the Hero swaps the silhouette for it.
 export const HERO_VIDEO = null
