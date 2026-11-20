@@ -26,7 +26,7 @@
 
   --header-h: 64px;
 
-  --font: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -1572,4 +1572,117 @@ a {
   .section :is(.reveal, .section-body > * > *) {
     opacity: 1 !important;
   }
+}
+
+/* ------------------------------------------------------------------
+   Type settings for Geist: regular body, heavy (800) headings with
+   tight tracking, semibold small labels
+   ------------------------------------------------------------------ */
+body {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+.wordmark,
+.facts strong,
+.panel-title,
+.compare-title,
+.compare-item figcaption .compare-weight,
+.made-in strong,
+.timeline-year,
+.noise-m {
+  font-weight: 600;
+}
+
+h1,
+h2,
+.section-head,
+.panel-title,
+.compare-title,
+.made-in strong {
+  letter-spacing: -0.015em;
+}
+
+.hero h1 {
+  letter-spacing: -0.025em;
+}
+
+.timeline-year {
+  letter-spacing: -0.02em;
+}
+
+.facts strong,
+.compare-item figcaption .compare-weight {
+  letter-spacing: -0.01em;
+}
+
+/* small labels: semibold, lighter tracking */
+.eyebrow,
+.point-number,
+.point-badge,
+.bleed-media.duo figcaption,
+.compare-mission span,
+.compare-noise-title,
+.timeline-when,
+.team-role {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* room for the g and j of the hero name (Geist descends further than the previous face) */
+.hero h1 {
+  font-size: clamp(58px, 12vw, 164px);
+  line-height: 0.96;
+}
+
+.hero-text {
+  margin-top: 30px;
+}
+
+.section-head,
+.compare-title,
+.made-in strong {
+  line-height: 1.04;
+}
+
+/* headings at Geist ExtraBold (800) */
+h1,
+h2,
+.wordmark,
+.facts strong,
+.panel-title,
+.compare-title,
+.compare-item figcaption .compare-weight,
+.made-in strong,
+.timeline-year,
+.noise-m {
+  font-weight: 800;
+}
+
+h3,
+.technology-lead,
+.noise-where,
+.contact-text {
+  font-weight: 700;
+}
+
+/* heavy display type wants a little more tightening */
+h1,
+h2,
+.section-head,
+.panel-title,
+.compare-title,
+.made-in strong {
+  letter-spacing: -0.03em;
+}
+
+.hero h1 {
+  letter-spacing: -0.04em;
+}
+
+.timeline-year {
+  letter-spacing: -0.035em;
 }
