@@ -31,7 +31,7 @@ export const hero = {
 export const keyFacts = [
   { value: 'Silent', text: 'Inaudible to people and animals beyond 10 m' },
   { value: 'Low-profile', text: 'Small visual footprint, easy to miss, hard to notice' },
-  { value: 'Ø 19 cm · 80 g', text: 'Nano UAV class' },
+  { value: 'Ø\u00a019\u00a0cm · 80\u00a0g', text: 'Nano UAV class' },
   { value: 'Day + thermal', text: 'Two cameras, one view of the situation' },
 ]
 
@@ -108,26 +108,26 @@ export const technology = {
       name: 'Nightjar',
       rotors: 'One main rotor, tail stabilisation',
       weight: '80 g',
-      rotor: 'Ø 19 cm',
-      length: '25 cm',
+      rotor: 'Ø\u00a019\u00a0cm',
+      length: '25\u00a0cm',
     },
     quad: {
       name: 'Comparable quadcopter',
       short: 'Quadcopter',
       rotors: 'Four smaller rotors',
-      weight: '≈ 500 g',
-      width: '37 cm',
-      length: '28 cm',
+      weight: '≈\u00a0500\u00a0g',
+      width: '37\u00a0cm',
+      length: '28\u00a0cm',
     },
     // Distance (m) beyond which each aircraft is no longer heard, in the given background noise.
     // Quad: from its declared sound power (84 dB(A)); Nightjar: target values, to be confirmed by measurement.
     noise: {
       title: 'Inaudible beyond',
       places: [
-        { place: 'On a typical street', ambient: '≈ 55 dB', nightjar: 10, quad: 50 },
+        { place: 'On a typical street', ambient: '≈\u00a055\u00a0dB', nightjar: 10, quad: 50 },
         {
           place: 'In a forest',
-          ambient: '≈ 40 dB',
+          ambient: '≈\u00a040\u00a0dB',
           nightjar: 25,
           quad: 150,
           aside: 'At 10 m, Nightjar is instinctively mistaken for a small flying animal',
@@ -173,7 +173,7 @@ export const team = {
       role: 'Co-founder',
       photo: '/images/zdenek-janda.jpg',
       points: [
-        'Aerospace engineering, CTU in Prague',
+        'Aerospace engineering, CTU\u00a0in\u00a0Prague',
         'Theoretical physics, Charles University',
         'Author of four patents',
         'Entrepreneur, simulation & structural engineer',
@@ -185,10 +185,10 @@ export const team = {
       role: 'Co-founder',
       photo: '/images/peter-prazenica.jpg',
       points: [
-        'Materials and manufacturing engineering, CTU in Prague',
+        'Materials and manufacturing engineering, CTU\u00a0in\u00a0Prague',
         'eForce Prague Formula Student alumnus (Drivetrain)',
         // non-breaking space: "(Recovery system)" wraps as one piece, never "system)" alone
-        'Czech Rocket Challenge alumnus (Recovery system)',
+        'Czech Rocket Challenge alumnus (Recovery\u00a0system)',
         'Hands-on builder',
         'R&D',
       ],
