@@ -35,7 +35,7 @@ export const keyFacts = [
   { value: 'Silent', text: 'Inaudible to people and animals beyond 10 m' },
   { value: 'Low-profile', text: 'Small visual footprint, easy to miss, hard to notice' },
   { value: 'Ø\u00a019\u00a0cm · 80\u00a0g', text: 'Nano UAV class' },
-  { value: 'Day + thermal', text: 'Two cameras, one view of the situation' },
+  { value: 'Day + Thermal', text: 'Two cameras, one view of the situation' },
 ]
 
 // Use-case panels: generated scenes with the real Nightjar composited in (both rotors spinning)
