@@ -20,6 +20,8 @@ export const origin = {
 export const hero = {
   eyebrow: 'Technology for those who protect',
   title: 'Nightjar',
+  // registered trademark, shown small and raised after the name in the hero only
+  mark: '®',
   text: 'Whispering helidrone designed for the unseen',
   image: '/images/nightjar-hero.jpg',
   // TODO: demo only. The wide images have background added by hand; replace with a proper wide render.

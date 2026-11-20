@@ -1691,3 +1691,15 @@ h2,
 .timeline-year {
   letter-spacing: -0.035em;
 }
+
+/* ® after the hero name: small and raised to the top of the capitals, without changing the line height */
+.hero-mark {
+  margin-left: 0.06em;
+  font-size: 0.2em;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -2.75em;
+}

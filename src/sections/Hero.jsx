@@ -19,7 +19,10 @@ export default function Hero() {
       <div className="container hero-content">
         <div className="hero-copy">
           <p className="eyebrow">{hero.eyebrow}</p>
-          <h1>{hero.title}</h1>
+          <h1>
+            {hero.title}
+            {hero.mark && <sup className="hero-mark">{hero.mark}</sup>}
+          </h1>
           <p className="hero-text">{hero.text}</p>
         </div>
         {/* bottom-right, level with the intro line: adds no height, so the text stays clear of the render */}
