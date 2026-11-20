@@ -186,7 +186,8 @@ export const team = {
       photo: '/images/peter-prazenica.jpg',
       points: [
         'Materials and manufacturing engineering, CTU in Prague',
-        'eForce Prague Formula Student alumni',
+        'eForce Prague Formula Student alumnus',
+        'Czech Rocket Challenge alumnus',
         'Hands-on builder',
         'R&D',
       ],
