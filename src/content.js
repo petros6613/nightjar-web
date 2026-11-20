@@ -187,7 +187,8 @@ export const team = {
       points: [
         'Materials and manufacturing engineering, CTU in Prague',
         'eForce Prague Formula Student alumnus (Drivetrain)',
-        'Czech Rocket Challenge alumnus (Recovery system)',
+        // non-breaking space: "(Recovery system)" wraps as one piece, never "system)" alone
+        'Czech Rocket Challenge alumnus (Recovery system)',
         'Hands-on builder',
         'R&D',
       ],
