@@ -166,7 +166,7 @@ export const timeline = {
 }
 
 export const team = {
-  title: 'Two engineers who build',
+  title: 'Two engineers building for real customers',
   founders: [
     {
       name: 'Zdeněk Janda',
